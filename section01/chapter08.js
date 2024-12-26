@@ -1,35 +1,34 @@
-// 1. 단락평가
+//1. 단락평가
 let a = false;
 let b = true;
 
-let funca = () => {
+let funca = ()=>{
     console.log("funca");
     return false;
-};
-
-let funcb = () => {
+}; 
+let funcb = ()=>{
     console.log("funcb");
     return true;
-};
+}; 
 
-// console.log(a && b);
-
-// 실제 사용하는 방법
-// 함수 선언, 표현식, 화살표 함수 
-// 1. 어려운 방식
-function printName(person) {
-    const name = person && person.name;
-    console.log(name || "person값이 없습니다.");
+//주의: 집중 (문자열일때)
+//console.log(funca() || funcb()); 
+//실제사용하는 방법
+//함수선언, 표현식, 화살표함수
+function printName(person){
+    const name = person && person.name; 
+    console.log(name || "person 값이 없음"); 
 }
-// 2. 내수준 방식 
-function printName2(person) {
-    if(typeof person === 'object') {
+
+function printName2(person){
+    if(typeof person === 'object' ){
         console.log(person.name);
-    }else {
-        console.log("객체아님");
+    }else{
+        console.log("person 값이 없음"); 
+
     }
 }
-// console.log(typeof {});
+//console.log(typeof {}); 
 
-printName2();
-// printName({name:"jjy"});
+printName2(); 
+//printName2({name:"kdj"}); 

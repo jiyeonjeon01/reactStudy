@@ -1,25 +1,24 @@
-// 1. 객체생성 생성자, 객체 리터널 
-let obj1 = new Object();
-let obj2 = {};
+//1.객체생성 생성자, 객체리터널
+let obj1 = new Object(); 
+let obj2 = {};   
 
-// 2. 객체 프로퍼티(객체속성)
+//2. 객체 프로퍼티(객체속성)
 let person = {
-    name:"홍길동", 
-    age:20,
-    hobby:"축구",
-    job:"웹개발자",
+    name: "홍길동",
+    age: 20,
+    hobby: "축구",
+    job: "웹개발자",
     extra: {},
-    extra2: function(){
+    extra2: function (){
         console.log("나는 멤버함수");
     },
     islike: true,
-};
+}; 
+//멤버변수 새로추가
+person.address ="강남구 352";
+//멤버변수 삭제
+delete person.address; 
+//멤머변수 유무
+let flag = "extra2" in person; 
+console.log(`flag = ${flag}`); 
 
-// 멤버변수 새로 추가가
-person.address = "강남구 352";
-console.log(person["address"]);
-// 멤버 변수 삭제
-delete person.address;
-// 멤버변수 유무
-let flag = "name" in person;
-console.log(`flag = ${flag}`);
